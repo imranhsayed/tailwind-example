@@ -1,0 +1,18 @@
+/* Convert PX to REM global function */
+@function rem($px, $basepx:16){
+    @return ($px/$basepx)+0rem;
+}
+
+/* Tailwinds */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+
+/* Customized */
+
+@import "./theme.scss";
+
+@import "./fonts/index.scss";
+

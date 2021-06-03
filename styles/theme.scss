@@ -1,0 +1,92 @@
+@layer base {
+  html {
+    overflow-x: hidden;
+  }
+
+  a {
+    @apply text-blue-dark;
+    @apply transition-colors;
+    @apply duration-500;
+    @apply cursor-pointer;
+  }
+
+  a:hover {
+    @apply text-blue-normal;
+  }
+
+  dl,
+  dd,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  hr,
+  p,
+  pre,
+  blockquote {
+    @apply my-2;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bioRhyme;
+    @apply font-medium;
+  }
+
+  h1 {
+    @apply my-3;
+    @apply font-bold;
+  }
+
+  h2 {
+    @apply text-xl;
+  }
+
+  h3,
+  h4 {
+    @apply text-lg;
+  }
+  b,
+  strong {
+    font-weight: bold;
+  }
+
+  button:focus {
+    outline: none;
+  }
+}
+
+// Adding new utility classes.
+@layer utilities {
+	@variants responsive {
+		.truncate-1 {
+			overflow: hidden;
+			display: -webkit-box;
+			-webkit-line-clamp: 1;
+			-webkit-box-orient: vertical;
+			text-overflow: ellipsis;
+		}
+		.truncate-2 {
+			/* needs line-height and height */
+			overflow: hidden;
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			text-overflow: ellipsis;
+		}
+		.truncate-3 {
+			/* needs line-height and height */
+			overflow: hidden;
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+			text-overflow: ellipsis;
+		}
+	}
+}
